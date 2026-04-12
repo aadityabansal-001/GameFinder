@@ -18,29 +18,30 @@ body {
 }
 
 .logo {
-  font-size: 20px;
-}
-
-.navbar input,
-select,
-button {
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: none;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .navbar input {
-  width: 200px;
+  width: 300px;
+  max-width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
   background: #2a2a2a;
   color: white;
 }
 
-.navbar select {
-  background: #2a2a2a;
-  color: white;
+.navbar input:focus {
+  outline: none;
+  box-shadow: 0 0 8px #ff4757;
 }
 
+.navbar select,
 .navbar button {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
   background: #2a2a2a;
   color: white;
   cursor: pointer;
@@ -51,7 +52,7 @@ button {
 }
 
 .hero h2 {
-  font-size: 35px;
+  font-size: 32px;
 }
 
 #gamesContainer {
@@ -62,6 +63,7 @@ button {
 }
 
 .game-card {
+  position: relative;
   background: #1c1c1c;
   border-radius: 12px;
   overflow: hidden;
@@ -70,12 +72,53 @@ button {
 
 .game-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 71, 87, 0.4);
 }
 
 .game-card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.game-card:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  opacity: 0;
+  transition: 0.3s;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.game-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay p,
+.overlay span {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.game-card:hover .overlay p,
+.game-card:hover .overlay span {
+  opacity: 1;
+}
+
+.genres span {
+  background: #ff4757;
+  padding: 3px 6px;
+  margin: 2px;
+  border-radius: 5px;
+  font-size: 10px;
 }
 
 .game-info {
@@ -84,12 +127,46 @@ button {
 
 .game-info h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .game-info p {
   margin: 5px 0;
-  font-size: 13px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.fav-btn {
+  margin-top: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.fav-btn:active {
+  transform: scale(1.2);
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #444;
+  border-top: 5px solid #ff4757;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 50px auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.footer {
+  background: #1a1a1a;
+  padding: 30px;
+  text-align: center;
+}
+
+.footer-content p {
   color: #aaa;
 }
 
@@ -98,7 +175,8 @@ button {
   color: black;
 }
 
-.light-mode .navbar {
+.light-mode .navbar,
+.light-mode .footer {
   background: white;
 }
 

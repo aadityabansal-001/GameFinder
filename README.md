@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-Game Finder is a web application that allows users to discover, search, and explore video games using real-time data from a public API. The app provides an interactive and user-friendly interface to browse games and view important details.
+Game Finder is a dynamic web application that allows users to explore, search, and filter video games using real-time data from the RAWG API. The application provides a modern and interactive interface with smooth UI effects, making it easy to discover trending games.
 
 ---
 
@@ -12,8 +12,8 @@ The objective of this project is to demonstrate:
 
 * API integration using `fetch`
 * Use of JavaScript Array Higher-Order Functions (HOFs)
-* Building a responsive UI using HTML, CSS, and JavaScript
-* Writing clean and structured code
+* Dynamic DOM manipulation
+* Responsive and interactive UI design using HTML, CSS, and JavaScript
 
 ---
 
@@ -22,61 +22,87 @@ The objective of this project is to demonstrate:
 **RAWG Video Games API**
 https://rawg.io/apidocs
 
-This API provides detailed information about video games including images, ratings, genres, and release dates.
+This API provides:
+
+* Game images
+* Ratings
+* Genres
+* Release dates
+* Platform details
 
 ---
 
-## ✨ Features (Planned)
+## ✨ Features
 
 ### 🔍 Search
 
-* Users can search games by name
+* Search games by name in real-time
 
 ### 🎯 Filtering
 
-* Filter games based on genre
+* Filter games based on genres (Action, RPG, etc.)
 
 ### 🔃 Sorting
 
-* Sort games by rating or release date
+* Sort games by:
+
+  * Rating
+  * Release Date
 
 ### 🎮 Game Display
 
-* Show:
+Each game card displays:
 
-  * Game image
-  * Name
-  * Rating
-  * Release date
+* Game image
+* Name
+* Rating
+* Release date
+* Platforms (on hover)
+* Genres (on hover)
+
+### ❤️ Favorites
+
+* Mark/unmark games as favorites
+* Stored using `localStorage`
+
+### 🌙 Dark Mode / Light Mode
+
+* Toggle between themes for better user experience
+
+### ✨ UI & Effects
+
+* Hover overlay with additional game details
+* Smooth transitions and hover animations
+* Responsive grid layout
+* Interactive buttons
+
+### ⏳ Loading Indicator
+
+* Spinner shown while fetching API data
 
 ### 📱 Responsive Design
 
-* Works on mobile, tablet, and desktop screens
+* Works across desktop, tablet, and mobile screens
 
----
+### 🦶 Footer Section
 
-## 🚀 Bonus Features (Optional)
-
-* ❤️ Add to Favorites (using localStorage)
-* 🌙 Dark Mode / Light Mode
-* ⏳ Loading indicator during API calls
-* 🔄 Pagination or infinite scrolling
-* ⚡ Debounced search input
+* Clean footer with project branding and information
 
 ---
 
 ## ⚙️ Technologies Used
 
 * HTML5
-* CSS3
+* CSS3 (Flexbox, Grid, Transitions)
 * JavaScript (ES6+)
 * Fetch API
+* Local Storage
 
 ---
 
 ## 📁 Project Structure
 
-```id="p3k9rt"
+```
 game-finder/
 │── index.html
 │── style.css
@@ -90,27 +116,31 @@ game-finder/
 
 1. Clone the repository
 2. Open `index.html` in your browser
-3. Add your API key in `script.js`
+3. Ensure internet connection for API calls
 
 ---
 
-## 📅 Milestones
+## 📅 Milestones Completed
 
-* Milestone 1: Project planning and setup
-* Milestone 2: API integration
-* Milestone 3: Search, filter, and sorting features
-* Milestone 4: Deployment and final submission
+* ✅ Milestone 1: Project setup and planning
+* ✅ Milestone 2: API integration and data display
+* ✅ Milestone 3: Search, filter, sorting, favorites, dark mode
+* ✅ Milestone 4: UI improvements, animations, and final submission
 
 ---
 
-## 💡 Future Scope
+## 🚀 Future Improvements
 
+* Add pagination or infinite scrolling
+* Implement debounced search for better performance
+* Add detailed game view (popup/modal)
+* Enhance UI with advanced animations
 * Add more filters (platform, popularity)
-* Improve UI with animations
-* Store user preferences
 
 ---
 
 ## 🙌 Author
 
 * Aaditya
+
+---

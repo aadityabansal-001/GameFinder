@@ -10,16 +10,41 @@
 
   <nav class="navbar">
     <h1 class="logo">🎮 GameFinder</h1>
+
+    <input type="text" id="searchInput" placeholder="Search games..." />
+
+    <select id="genreFilter">
+      <option value="all">All Genres</option>
+      <option value="Action">Action</option>
+      <option value="Adventure">Adventure</option>
+      <option value="RPG">RPG</option>
+      <option value="Shooter">Shooter</option>
+    </select>
+
+    <select id="sortSelect">
+      <option value="">Sort By</option>
+      <option value="rating">Rating</option>
+      <option value="date">Release Date</option>
+    </select>
+
     <button id="darkModeToggle">🌙</button>
   </nav>
 
   <section class="hero">
-    <h2>New and Trending</h2>
+    <h2>🔥 Discover Top Games</h2>
   </section>
 
   <main>
     <div id="gamesContainer"></div>
   </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>🎮 GameFinder</h3>
+      <p>Discover and explore the best video games in one place.</p>
+      <p class="footer-copy">© 2026 GameFinder | RAWG API</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
